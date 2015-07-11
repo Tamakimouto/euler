@@ -10,18 +10,18 @@
 
 long largestFactor(long num, long x){
   
-  if !(num % x) 
-    return (num/x == 1) ? x : largestFactor(num/x, x);
-  else if (x == 2)
-    return largestFactor(num, x++);
-  else
-    return largestFactor(num, x+2);
-
+	if !(num % x) 
+		return (num/x == 1) ? x : largestFactor(num/x, x);
+	else if (x == 2)
+		return largestFactor(num, x++);
+	else
+		return largestFactor(num, x+2);
+	
 }
 
 int main(){
-  
-  printf("%ld", largestFactor(NUM, 2));
-  
-  return 0;
+	
+	printf("%ld", largestFactor(NUM, 2));
+	
+	return 0;
 }
