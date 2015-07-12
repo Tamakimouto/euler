@@ -24,22 +24,22 @@ int isPal(long x){
 long pal(){
     
     int i, j, max = 0;
-	for (i = LARGEST_THREE_DIGIT; i > 99; i--){
-		for (j = i; j > 99; j--){
-			if (isPal(i*j)){
-				if (i*j > max){
-					max = i*j;
-				}
-				continue;
-			}
-		}
-	}
-	return max;
+    for (i = LARGEST_THREE_DIGIT; i > 99; i--){
+        for (j = i; j > 99; j--){
+            if (isPal(i*j)){
+                if (i*j > max){
+                    max = i*j;
+                }
+                continue;
+            }
+        }
+    }
+    return max;
 }
 
 int main(){
     
-	printf("%ld\n", pal());
+    printf("%ld\n", pal());
     
-	return 0;
+    return 0;
 }//main
