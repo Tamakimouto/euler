@@ -13,22 +13,21 @@
 #include <stdio.h>
 
 int fibSum(int * sum, int x, int y){
-	if (y > 4000000){
-		*sum += !(x % 2) ? x : 0;
-		return *sum;
-	} else {
-		*sum += !(x % 2) ? x : 0;
-		return fibSum(sum, y, x + y);
-	}
+    if (y > 4000000){
+        *sum += !(x % 2) ? x : 0;
+        return *sum;
+    } else {
+        *sum += !(x % 2) ? x : 0;
+        return fibSum(sum, y, x + y);
+    }
 }
 
 int main(){
 
-	int sum = 0;
-	int x = 1;
-	int y = 2;
-	
-	printf("%d\n", fibSum(&sum, x, y));
-	
-	return 0;
+    int sum = 0;
+    int x = 1;
+    int y = 2;
+
+    printf("%d\n", fibSum(&sum, x, y));
+    return 0;
 }
