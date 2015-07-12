@@ -11,24 +11,25 @@
 #define LARGEST_THREE_DIGIT 999
 
 int isPal(long x){
-	
-	long temp = x;
-	long rev = 0;
-	while (temp){
-		rev = rev * 10 + (temp % 10);
-		temp /= 10;
-	}
-	return (rev == x) ? 1 : 0;
+    
+    long temp = x;
+    long rev = 0;
+    while (temp){
+        rev = rev * 10 + (temp % 10);
+        temp /= 10;
+    }
+    return (rev == x) ? 1 : 0;
 }
 
 long pal(){
-
-	int i, j, max = 0;
+    
+    int i, j, max = 0;
 	for (i = LARGEST_THREE_DIGIT; i > 99; i--){
 		for (j = i; j > 99; j--){
 			if (isPal(i*j)){
-				if (i*j > max)
+				if (i*j > max){
 					max = i*j;
+				}
 				continue;
 			}
 		}
@@ -37,8 +38,8 @@ long pal(){
 }
 
 int main(){
-  
+    
 	printf("%ld\n", pal());
-  
+    
 	return 0;
 }//main
