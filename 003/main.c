@@ -20,8 +20,6 @@ long largestFactor(long num, long x){
 }
 
 int main(){
-	
 	printf("%ld", largestFactor(NUM, 2));
-	
 	return 0;
 }
